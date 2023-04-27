@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Javascript Accordian</h1>
+
+    <div class="accordian">
+      <div class="accordian-item">
+        <div class="accordian-title">Accordian Title 1</div>
+        <div class="accordian-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, veniam
+          cum delectus expedita optio placeat voluptatem repellat neque
+          perspiciatis inventore voluptate ab quisquam recusandae, iusto nobis,
+          perferendis necessitatibus. Modi numquam quis nostrum quisquam aut.
+          Ducimus modi ut perferendis illum! Corporis eum nemo fuga asperiores
+          fugit adipisci deleniti id, consequatur voluptas?
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-title">Accordian Title 2</div>
+        <div class="accordian-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, veniam
+          cum delectus expedita optio placeat voluptatem repellat neque
+          perspiciatis inventore voluptate ab quisquam recusandae, iusto nobis,
+          perferendis necessitatibus. Modi numquam quis nostrum quisquam aut.
+          Ducimus modi ut perferendis illum! Corporis eum nemo fuga asperiores
+          fugit adipisci deleniti id, consequatur voluptas?
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-title">Accordian Title 3</div>
+        <div class="accordian-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, veniam
+          cum delectus expedita optio placeat voluptatem repellat neque
+          perspiciatis inventore voluptate ab quisquam recusandae, iusto nobis,
+          perferendis necessitatibus. Modi numquam quis nostrum quisquam aut.
+          Ducimus modi ut perferendis illum! Corporis eum nemo fuga asperiores
+          fugit adipisci deleniti id, consequatur voluptas?
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-title">Accordian Title 4</div>
+        <div class="accordian-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, veniam
+          cum delectus expedita optio placeat voluptatem repellat neque
+          perspiciatis inventore voluptate ab quisquam recusandae, iusto nobis,
+          perferendis necessitatibus. Modi numquam quis nostrum quisquam aut.
+          Ducimus modi ut perferendis illum! Corporis eum nemo fuga asperiores
+          fugit adipisci deleniti id, consequatur voluptas?
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const accordianItems=document.querySelectorAll(".accordian-item")
+        accordianItems.forEach(function(item){
+            const title=item.querySelector(".accordian-title")
+            const content=item.querySelector(".accordian-content")
+
+            title.addEventListener('click',()=>{
+                for(i=0;i<accordianItems.length;i++){
+                    if(accordianItems[i]!=item){
+                        accordianItems[i].classList.remove('active')
+                    }else{
+                        item.classList.toggle('active')
+                    }
+                }
+                
+            })
+
+        })
+    </script>
+  </body>
+</html>
